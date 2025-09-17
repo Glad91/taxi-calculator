@@ -24,6 +24,7 @@ const TARIFFS: TariffRates = {
 
 const PICKUP_FEE = 2.94
 const WAITING_RATE_PER_HOUR = 29.44
+const CPAM_DISCOUNT = 0.26
 
 export function TaxiCalculator() {
   const [distance, setDistance] = useState<string>('')
@@ -141,6 +142,21 @@ export function TaxiCalculator() {
                 <div className="flex justify-between font-bold text-lg text-green-700">
                   <span>Total:</span>
                   <span>{total.toFixed(2)}€</span>
+                </div>
+                <div className="mt-3 pt-3 border-t border-blue-200 bg-blue-50 p-3 rounded">
+                  <div className="text-sm text-blue-700 font-medium mb-2">
+                    💊 Remboursement CPAM (26%)
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span>Prix après remise CPAM:</span>
+                    <span className="font-semibold text-blue-700">
+                      {(total * (1 - CPAM_DISCOUNT)).toFixed(2)}€
+                    </span>
+                  </div>
+                  <div className="flex justify-between text-xs text-blue-600 mt-1">
+                    <span>Remise:</span>
+                    <span>-{(total * CPAM_DISCOUNT).toFixed(2)}€</span>
+                  </div>
                 </div>
               </div>
             </CardContent>
