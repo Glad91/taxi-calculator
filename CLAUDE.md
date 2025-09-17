@@ -16,23 +16,27 @@ This is a React + TypeScript + Vite application for a taxi calculator. The proje
 ## Architecture
 
 ### Build System
+
 - **Bundler**: Vite 7+ with React plugin
 - **TypeScript**: Strict mode enabled with modern target (ES2022)
 - **Package Manager**: Uses pnpm (lockfile present)
 
 ### Code Structure
+
 - **Entry Point**: `src/main.tsx` - React 19 with StrictMode
 - **Root Component**: `src/App.tsx` - Main application component
 - **Styling**: CSS modules (`App.css`, `index.css`)
 - **Assets**: Static assets in `src/assets/`
 
 ### TypeScript Configuration
+
 - Uses project references with `tsconfig.app.json` for app code
 - Strict linting enabled (`noUnusedLocals`, `noUnusedParameters`, etc.)
 - Modern module resolution with bundler mode
 - JSX transformation via `react-jsx`
 
 ### ESLint Setup
+
 - TypeScript ESLint with recommended rules
 - React Hooks plugin for hooks best practices
 - React Refresh plugin for Vite integration

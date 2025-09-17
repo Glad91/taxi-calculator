@@ -9,7 +9,13 @@
       "Bash(git init:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(npx vercel:*)"
+      "Bash(npx vercel:*)",
+      "Bash(pnpm typecheck:*)",
+      "Bash(pnpm prettier:check:*)",
+      "Bash(pnpm check:*)",
+      "Bash(pnpm format:*)",
+      "Bash(gh repo create:*)",
+      "Bash(gh repo view:*)"
     ],
     "deny": [],
     "ask": []
